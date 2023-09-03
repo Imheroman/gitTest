@@ -1,17 +1,17 @@
 package com.nhnacademy;
 
-import java.util.Objects;
-import org.jetbrains.annotations.NotNull;
-
 public class Person {
     private String name;
 
-    @NotNull
-    public Person(@NotNull String name) {
-        if (name.isEmpty() || Objects.isNull(name)) {
+    public Person(String name) {
+        if (name.isEmpty()) {
             throw new IllegalArgumentException("Name is Empty");
         } else {
             this.name = name;
         }
+    }
+
+    public String getName() {
+        return name;
     }
 }
